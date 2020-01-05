@@ -1,0 +1,24 @@
+package springIOC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BeanLifeCycleDemoApp {
+
+	public static void main(String[] args) {
+		// Testing the Singleton Bean Scope
+		System.out.println("BeanScopeDemoAPp: Testing Singleton Bean Scope");
+//		Load the Spring 'Bean' Config file;
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
+//		Retrieve all the beans necessary;
+		Course theCourse  = context.getBean("myCourse", Course.class);
+//		Use the Object to call external Methods;
+		System.out.println("getDailyCourse: " +theCourse.getDailyCourse());
+//		close context
+		context.close();
+		
+		
+				
+
+	}
+
+}

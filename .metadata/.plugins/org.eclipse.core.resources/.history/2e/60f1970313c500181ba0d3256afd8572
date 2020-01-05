@@ -1,0 +1,11 @@
+package org.jb.ikmonlinetest;
+
+public class Parent1 implements MyInterface{
+
+	@Override
+	public void method1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

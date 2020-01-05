@@ -1,0 +1,15 @@
+package org.jb.ikmonlinetest;
+import java.util.*;
+import java.util.function.*;
+
+public class Sandbox {}
+public class MethodRefCtor {
+//	     what method we have to pleace here to get output [RED, Green , Blue]
+
+	    public static void main(String[] args) {
+	        MethodRefCtor mrc = new MethodRefCtor();
+	        populate(ArrayList::new,"Red","Green","Blue");
+	    }
+	}
+
+}

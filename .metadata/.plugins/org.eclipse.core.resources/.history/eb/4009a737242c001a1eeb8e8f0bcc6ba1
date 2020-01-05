@@ -1,0 +1,21 @@
+package springs.annotations;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class AnnotationDemoApp {
+
+	public static void main(String[] args) {
+
+//		Read Spring Config File
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml"); 
+		
+//		Retrieve Bean from the Spring Container
+		Customer theCustomer = context.getBean("theRegularCustomer", Customer.class);
+		
+//		Call any Methods using the Helper or Bean
+		
+//		Close the Context or Container
+
+	}
+
+}

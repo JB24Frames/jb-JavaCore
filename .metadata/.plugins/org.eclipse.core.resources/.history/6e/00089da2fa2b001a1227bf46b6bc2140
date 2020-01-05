@@ -1,0 +1,11 @@
+package springIOC;
+
+public class BeanScopeDemoApp {
+
+	public static void main(String[] args) {
+		// Testing the Singleton Bean Scope
+		System.out.println("BeanScopeDemoAPp: Testing Singleton Bean Scope");
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package springIOC;
+
+public class OracleCourse implements Course {
+	
+//	DI_SetterInjection: Steps
+//	1: Create new class and inherit the interface 
+//	2: Create fields to call method and create no-arg Constructor for Spring default invoking and also to diagnose 
+//	3: Create setter methods and inject them in applicationCnotext as property name and with BeanID as Reference.(Configuration ) 
+	
+	private CourseService courseService;
+
+	//	Create no-arg Constructor
+	public OracleCourse() {
+		System.out.println("DI_SI: Inside No-Arg Constructor");
+	}
+
+//	Define our Setter Methods
+	public void setCourseService(CourseService courseService) {
+		this.courseService = courseService;
+	}
+
+	@Override
+	public String getDailyCourse() {
+		return "DI_SI: Practice new Course each day";
+	}
+
+	@Override
+	public String getDailyService() {
+		return "DI_SI: Interact with different portals and news feed to get good Service";
+	}
+
+}

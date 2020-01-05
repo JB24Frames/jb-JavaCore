@@ -1,0 +1,7 @@
+package org.jb.ikmonlinetest;
+
+public class SalesInovice extends Invoice{
+	public static String formatId(String oldId) {
+	      return oldId + "_SalesInvoice";
+	   }
+}

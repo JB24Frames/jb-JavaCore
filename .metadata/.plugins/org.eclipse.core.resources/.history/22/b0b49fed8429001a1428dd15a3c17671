@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here..File is Loaded from the Starter files down-loaded -->
+    <!-- <bean id = "myFortune" class ="com.jbc.springwork.HappyFortuneService"> -->
+    <!-- <constructor-arg ref = "myFortune"/> -->
+    <!-- </bean> -->
+    <!-- <bean id = "cirCoach" class = "com.jbc.springwork.CircketCoach">-->
+    <!-- </bean> -->
+    <!-- <bean id= "myCoach1" class = "com.jbc.springwork.TrackCoach"> -->     
+    <!-- </bean> -->
+    <!-- <bean id= "myCoach" class = "com.jbc.springwork.BaseballCoach"> java should be taken out -->
+    <!-- Constructor Injection, myFortune is bean id on class that has constructor -->
+    <!-- </bean>    -->
+    
+    <!--  Defining Beans for myCourse App for springIOC package -->
+   <bean id= "myCourse" class = "springIOC.TrackCourse">
+   </bean>
+   <!-- By Using this one Bean we can configure new classes into this bean, so finally our 'applicationcontext.xml' file is configurable. -->
+   <bean id= "myCourse1" class = "springIOC.JavaCourse">
+   </bean>
+   <bean id= "myCourse2" class = "springIOC.SpringCourse">
+   </bean>
+</beans> 

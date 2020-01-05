@@ -1,0 +1,5 @@
+package springs.annotations;
+
+public interface Customer {
+
+}

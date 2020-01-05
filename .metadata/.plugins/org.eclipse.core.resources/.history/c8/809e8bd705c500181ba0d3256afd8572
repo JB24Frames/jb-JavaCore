@@ -1,0 +1,17 @@
+package org.jb.ikmonlinetest;
+
+public class CodeCompiling {
+
+	import java.util.*;
+	import java.util.function.*;
+	public class Sandbox {}
+	class MethodRefCtor
+	{
+	     *****
+
+	    public static void main(String[] args) {
+	        MethodRefCtor mrc = new MethodRefCtor();
+	        populate(ArrayList::new,"Red","Green","Blue");
+	    }
+	}
+}

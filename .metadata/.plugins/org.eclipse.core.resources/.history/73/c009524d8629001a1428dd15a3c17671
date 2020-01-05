@@ -1,0 +1,7 @@
+package springIOC;
+
+public interface CourseService {
+	
+	public String getService();
+
+}

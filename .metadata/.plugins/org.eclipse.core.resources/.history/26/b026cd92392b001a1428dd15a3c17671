@@ -1,0 +1,32 @@
+package springIOC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+		
+//		Load Spring Configuration  File
+	ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+//		Retrieve Bean from Spring Container
+	Course theCourse = context1.getBean("myCourse", Course.class);
+	Course theCourse1 = context1.getBean("myCourse1", Course.class);
+	Course theCourse2 = context1.getBean("myCourse2", Course.class);
+		
+//		Call Methods on the Bean
+	System.out.println(" HelloSpring App using Beans with ClassPathXmlApplicationContext for Class TrackCourse BeanId: myCourse:" +theCourse.getDailyCourse());
+	System.out.println(" HelloSpring App using Beans with ClassPathXmlApplicationContext for Class JavaCourse BeanId: myCourse1:" +theCourse1.getDailyCourse());
+	System.out.println(" HelloSpring App using Beans with ClassPathXmlApplicationContext for Class SpringCourse BeanId: myCourse2:" +theCourse2.getDailyCourse());
+		
+//	Calling new methods getDailyService()
+	System.out.println("<h1>Calling New Methods: Through Dependency Injection:</h1>");
+	System.out.println(" HelloSpring App using DependencyInjection Type Constructor Injection in ClassPathXmlApplicationContext for Class JavaCourse BeanId: myCourse1:" +theCourse1.getDailyService());
+	System.out.println(" HelloSpring App using DependencyInjection Type Constructor Injection in ClassPathXmlApplicationContext for Class TrackCourse BeanId: myCourse:" +theCourse.getDailyService());
+	
+//		Close the context
+	 context1.close();
+	
+	}
+
+}

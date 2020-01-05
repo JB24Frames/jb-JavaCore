@@ -1,0 +1,18 @@
+package springIOC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BeanScopeDemoApp {
+
+	public static void main(String[] args) {
+		// Testing the Singleton Bean Scope
+		System.out.println("BeanScopeDemoAPp: Testing Singleton Bean Scope");
+//		Load the Spring 'Bean' Config file
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+		
+		
+				
+
+	}
+
+}

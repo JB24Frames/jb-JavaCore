@@ -1,0 +1,31 @@
+SpringFrameWork: When an Application calls Objects from  different classes having implemented by the single interface , its harder for the coder to 
+load the class objects for particular Method of a class to be executed, so that spring has something to do with,Object factory that we configure the Classes
+ into them and render objects from the object factory. this is call Spring Container 
+ Spring Container:  
+ Inversion of Control: Create and manage objects
+ Dependency Injection:  Inject Object Dependencies .(Making a Client cal to another Object that takes responsibilities for providing 
+ Dependencies. instead of building mannullay the objects, the springframework will help using injecting the dependencies 
+ or helper objects.ex: If an interface depends on a service that when only the method of the interface gets executed after
+ calling or loading the service, this service is the injection and coach now depends on this injection so this is DI.  
+ Spring Configuration: can be done in 3 ways , 1) XMl configuration file (legacy, but legacy apps use this), 2) Java Annotations 3) Java Source Code 
+ Spring Development Process: Configure Spring Beans, Create Spring Container , Retrieve Bean from spring Container.  
+ 1) XML Config file: It has Beans with bean id, and class with the Application.
+ 2) Spring Container: Application Context: Special Implementations like ClassPathXMLApplicationContext, AnnotationsConfigApllicationContext, GenericWebApplicationContext, etc
+   we pass the created xml file to this container.
+   ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(.xml file);
+ 3) Retrieve Beans from Spring container: Application Requests for an object from the Spring Container(Has Object Factory, Configuration file, interfaces and Classes)
+    Class obj = context.getBean(BeanId, Class/ interface that implemented by any particular class);
+    
+    Spring Bean?:A "Spring Bean" is simply a Java object.When Java objects are created by the Spring Container, then Spring refers to them as "Spring Beans".
+	Spring Beans are created from normal Java classes .... just like Java objects.
+	Spring Reference Manual; Source: https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-introduction
+	In the early days, there was a term called "Java Beans". Spring Beans have a similar concept but Spring Beans do not follow all of the rigorous requirements of Java Beans.
+After these steps, just create an application to use these features, Load the Config file, Retrieve the bean form container, call the methods , close the context.
+
+geBean(): Coach theCoach = context.getBean("myCoach", Coach.class); When we pass the interface to the method, behind the scenes Spring will cast the object for you.
+Behaves the same as getBean(String), but provides a measure of type safety by throwing a BeanNotOfRequiredTypeException if the bean is not of the required type. 
+This means that ClassCastException can't be thrown on casting the result correctly, as can happen with getBean(String).
+Injection Types: 1) Constructor 2) Setter Injection, Auto-Wiring was done only when Annotations are used.
+1)Constructor Injection: Define Dependency Class and interface, Create a constructor in class for di's., Config DI in Spring config file,
+ Behind Screen of Springs: THe args passed to ocntructor will  be passed as the args to the class with bean id as a reference,
+ with these the object factory was called and refeencced to the respective class by allocating memory to each new reference.

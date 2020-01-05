@@ -1,0 +1,22 @@
+/*package org.jb.ikmonlinetest;
+
+public class MyTestHarness {
+
+	new MyTestHarness().writeString(); 
+	
+	public static void main(String[] args) {
+		
+		public void writeString() {
+			   //object creation
+//			MyTestHarness object;
+//			MySub object = new MySub();
+			MySuper object = new MySuper();
+//			MySuper object = new MySub();
+			System.out.println("0,1");
+					System.out.println(object.buildString("0,"));
+			 }
+
+	}
+
+}
+*/

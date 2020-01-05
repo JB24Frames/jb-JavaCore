@@ -1,0 +1,11 @@
+package springs.annotations;
+
+public class BankCustomer implements Customer {
+
+	@Override
+	public String getDailyWork() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

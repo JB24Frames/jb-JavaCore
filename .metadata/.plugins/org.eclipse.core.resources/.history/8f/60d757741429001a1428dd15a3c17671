@@ -1,0 +1,18 @@
+package springIOC;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+		
+//		Load Spring Configuration  File
+	
+//		Retrieve Bean from Spring Container
+		
+//		Call Methods on the Bean
+		
+//		Close the context
+		
+
+	}
+
+}

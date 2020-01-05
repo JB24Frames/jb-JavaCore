@@ -1,0 +1,17 @@
+package springs.annotations;
+
+public class AnnotationDemoApp {
+
+	public static void main(String[] args) {
+
+//		Read Spring Config File
+		
+//		Retrieve Bena from the Spring Container
+		
+//		Call any Methods using the Helper or Bean
+		
+//		Close the Context
+
+	}
+
+}

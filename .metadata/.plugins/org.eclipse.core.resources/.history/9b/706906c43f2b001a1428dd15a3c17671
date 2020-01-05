@@ -1,0 +1,15 @@
+package springIOC;
+
+public class OracleCourse implements Course {
+
+	@Override
+	public String getDailyCourse() {
+		return "DI_SI: Practice new Course each day";
+	}
+
+	@Override
+	public String getDailyService() {
+		return "DI_SI: Interact with different portals and news feed to get good Service";
+	}
+
+}

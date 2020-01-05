@@ -1,0 +1,15 @@
+package org.jb.ikmonlinetest;
+
+public class MyTestHarness {
+
+	public static void main(String[] args) {
+		
+		public void writeString() {
+			   //object creation
+			MyTestHarness object;
+			   System.out.println(object.buildString("0,"));
+			 }
+
+	}
+
+}

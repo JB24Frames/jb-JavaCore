@@ -1,0 +1,23 @@
+package org.jb.ikmonlinetest;
+
+public class KnowPositiveValue {
+
+	public static void main(String[] args) {
+	
+//		know the positive value of x out of these all operations
+		int x = -1;
+		
+		x = x >>> 1;
+		System.out.println(x);
+		x = x >>> 32;
+		System.out.println(x);
+		x = x >> 32;
+		System.out.println(x);
+		x = x >> 1;
+		System.out.println(x);
+		x = x >>> 0;
+		System.out.println(x);
+
+	}
+
+}

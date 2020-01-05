@@ -1,0 +1,10 @@
+package springs.annotations;
+
+public class BankCustomer implements Customer {
+
+	@Override
+	public String getDailyWork() {
+		return "Inside: getDailyWork()-BankCustomer: Have to use the @Component to Scan the Classes for Beans";
+	}
+
+}

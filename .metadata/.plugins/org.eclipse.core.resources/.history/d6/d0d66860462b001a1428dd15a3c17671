@@ -1,0 +1,12 @@
+package springIOC;
+
+public class SetterInjectionAppDemo {
+
+	public static void main(String[] args) {
+
+		System.out.println("Achiveing DI_Setter Injection: Main Class SetterInjectionAppDemo:");
+//		Load Spring confi File;
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package springIOC;
+
+public class TrackCourse implements Course {
+
+	@Override
+	public String getDailyCourse() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

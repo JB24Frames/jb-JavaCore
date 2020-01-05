@@ -1,0 +1,13 @@
+package org.jb.ikmonlinetest;
+
+import java.time.YearMonth;
+
+public class YearMonthEX {
+
+	public static void main(String[] args) {
+		YearMonth ym1 = YearMonth.now();
+	     YearMonth ym2 = YearMonth.of(2016, Month.FEBRUARY);
+
+	}
+
+}

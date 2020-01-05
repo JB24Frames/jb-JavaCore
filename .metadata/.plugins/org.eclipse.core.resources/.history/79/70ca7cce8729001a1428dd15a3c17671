@@ -1,0 +1,21 @@
+package springIOC;
+
+public class JavaCourse implements Course {
+//	Accessing Course interface methods or fields through Implementing their respective Interfaces through @Override Annotation;
+//	This is equal to BaseBallCoach in SPring Class 31;
+	
+//	Define the Dependency Class or Interface;
+	public CourseService courseService;  
+	
+//	Define Dependecy Injection- Using Constructor Injection 
+	@Override
+	public String getDailyCourse() {
+		return "Spend 4 hours on each Course work.";
+	}
+
+	@Override
+	public String getDailyService() {
+		return null;
+	}
+
+}

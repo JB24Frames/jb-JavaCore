@@ -1,0 +1,11 @@
+package springIOC;
+
+public class RandomCourseService implements CourseService {
+
+	@Override
+	public String getService() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

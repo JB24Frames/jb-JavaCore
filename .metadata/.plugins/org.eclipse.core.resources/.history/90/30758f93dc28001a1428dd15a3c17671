@@ -1,0 +1,9 @@
+package springIOC;
+
+public class JavaCourse {
+	
+	public String getDailyCourse() {
+		return "Spend 4 hours on each Course work.";
+	}
+
+}

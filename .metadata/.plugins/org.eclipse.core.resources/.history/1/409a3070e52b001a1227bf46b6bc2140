@@ -1,0 +1,23 @@
+package springIOC;
+
+import java.util.Random;
+
+public class RandomCourseService implements CourseService {
+	
+	private String[] arrayData= {"Item 1", "item 1", "item 3", "item4"};
+//	Creating a Random number(to iterate Array) generator from Random Class; java.util.Random;
+	
+	private Random myRandomNumber = new Random();
+
+	@Override
+	public String getService() {
+		return null;
+	
+//	pick Random Number form given array;
+	int arrayIndex = myRandomNumber.nextInt(arrayData.length);
+	
+	String theCourseArrayData = arrayData[arrayIndex];
+	return theCourseArrayData;
+
+ }
+}

@@ -1,0 +1,18 @@
+package springIOC;
+
+public class TrackCourse implements Course {
+
+	@Override
+	public String getDailyCourse() {
+		// TODO Auto-generated method stub
+//		return null;
+		return "Read and Code atleast 8 hours";
+	}
+
+	@Override
+	public String getDailyService() {
+		
+		return null;
+	}
+
+}

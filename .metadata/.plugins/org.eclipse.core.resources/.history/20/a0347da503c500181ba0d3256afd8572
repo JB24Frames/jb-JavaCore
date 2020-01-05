@@ -1,0 +1,15 @@
+package org.jb.ikmonlinetest;
+
+public class LegalOperators {
+
+	public static void main(String[] args) {
+		int x =5;
+		x += 3;
+		System.out.println("x after 1 Op--> " +x);
+		x = ~x;
+//		x.value(); we can't invoke value() on primitive type
+//		x = !x; ! is undeifned 
+		x = x >> 1;
+	}
+
+}

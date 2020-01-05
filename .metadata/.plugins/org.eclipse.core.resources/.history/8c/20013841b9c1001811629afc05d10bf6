@@ -1,0 +1,28 @@
+package org.javaiw.io;
+
+import java.io.File;// can use * to get all in IO
+import java.util.Date;
+
+public class IOFile {
+
+	public static void main(String[] args) {
+		File file = new File("/Users/jagadeeshbathula/MyDocs/Eclipsedemo"); // /JBAppian-DE.docx// /Users/jagadeeshbathula/MyDocs give this to get directory if block executes 
+		System.out.println("Directory : "+file.isDirectory());
+		if(file.isDirectory()) {
+			String files[] = file.list();
+			for(String s1: files) {
+				System.out.println("Name: " +s1);
+			}
+		}
+			else 
+				System.out.println(file.toString() +" ->Is a File");
+		System.out.println("Printing File Attributes what Can and Can't do  on file");
+		System.out.println("exists(): " +file.exists());
+		System.out.println("canRead(): " +file.canRead());
+//		System.out.println(file.lastModified());// give in long i.e milliseconds modifide from jan 1 1970 GMt Epoch time in java, can wrap as Util Date.
+		System.out.println("file" +file +" Last Modified " +file.lastModified() +" mili seconds- wrapped as jav Util Date: " +new Date(file.lastModified()));
+		System.out.println("hasCode: " +file.hashCode());
+		System.out.println("Length of file: " +file.length());
+		} 
+	}
+

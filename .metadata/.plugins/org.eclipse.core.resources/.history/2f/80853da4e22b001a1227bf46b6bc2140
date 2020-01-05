@@ -1,0 +1,14 @@
+package springIOC;
+
+public class RandomCourseService implements CourseService {
+	
+//	Creating a Random Array from Random Class; java.util.Random;
+	
+	private String[] arrayData= {"Item 1", "item 1", "item 3", "item4"};
+
+	@Override
+	public String getService() {
+		return null;
+	}
+
+}

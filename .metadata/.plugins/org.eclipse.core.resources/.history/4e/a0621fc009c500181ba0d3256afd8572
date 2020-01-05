@@ -1,0 +1,12 @@
+package org.jb.ikmonlinetest;
+
+public class StreamsEx {
+
+	public static void main(String[] args) {
+//		which of the following proiveds dog as output
+		List<String> list = Arrays.asList("dog","over","good");
+		
+		
+	}
+
+}

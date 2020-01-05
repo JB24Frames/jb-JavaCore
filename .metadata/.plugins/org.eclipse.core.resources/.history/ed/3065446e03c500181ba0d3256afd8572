@@ -1,0 +1,14 @@
+package org.jb.ikmonlinetest;
+
+public class LegalOperators {
+
+	public static void main(String[] args) {
+		int x =5;
+		x += 3;
+		x = ~x;
+		x.value();
+		x = !x;
+		x = x >> 1;
+	}
+
+}

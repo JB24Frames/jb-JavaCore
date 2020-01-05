@@ -1,0 +1,5 @@
+package org.jb.ikmonlinetest;
+
+public interface MyInterface {
+
+}

@@ -1,0 +1,14 @@
+package springs.annotations;
+
+import org.springframework.stereotype.Component;
+
+//theRegularCustomer BeanID = thatSillyCoach: Spring Class 54;
+@Component("theRegularCustomer")
+public class BankCustomer implements Customer {
+
+	@Override
+	public String getDailyWork() {
+		return "Inside: getDailyWork()-BankCustomer: Have to use the @Component to Scan the Classes for Beans!";
+	}
+
+}

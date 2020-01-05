@@ -1,0 +1,15 @@
+package org.jb.ikmonlinetest;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class StreamsEx {
+
+	public static void main(String[] args) {
+//		which of the following proiveds dog as output
+		List<String> list = Arrays.asList("dog","over","good");
+		
+		
+	}
+
+}

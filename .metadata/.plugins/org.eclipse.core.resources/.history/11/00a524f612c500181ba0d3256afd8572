@@ -1,0 +1,5 @@
+package org.jb.ikmonlinetest;
+
+public class Parent1 implements MyInterface{
+
+}

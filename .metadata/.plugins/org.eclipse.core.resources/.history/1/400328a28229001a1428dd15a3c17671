@@ -1,0 +1,23 @@
+package springIOC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+		
+//		Load Spring Configuration  File
+	ClassPathXmlApplicationContext context1 = new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+//		Retrieve Bean from Spring Container
+	Course theCourse = context1.getBean("myCourse", Course.class);
+		
+//		Call Methods on the Bean
+	System.out.println(" HelloSpring App using Beans with ClassPathXmlApplicationContext:" +theCourse.getDailyCourse());
+		
+//		Close the context
+	 context1.close();
+	
+	}
+
+}

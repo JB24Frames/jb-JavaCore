@@ -1,0 +1,14 @@
+package springIOC;
+
+public class MyBranchApp {
+
+	public static void main(String[] args) {
+
+//		Create the Objects
+//		JavaCourse theCourse = new JavaCourse(); To use the 
+		Course theCourse = new JavaCourse();
+//		use the Object
+		System.out.println("Course Schedule for each Course:" +theCourse.getDailyCourse());
+	}
+
+}

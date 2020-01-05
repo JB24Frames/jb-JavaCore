@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here..File is Loaded from the Starter files down-loaded -->
+    <!-- <bean id = "myFortune" class ="com.jbc.springwork.HappyFortuneService"> -->
+    <!-- <constructor-arg ref = "myFortune"/> -->
+    <!-- </bean> -->
+    <!-- <bean id = "cirCoach" class = "com.jbc.springwork.CircketCoach">-->
+    <!-- </bean> -->
+    <!-- <bean id= "myCoach1" class = "com.jbc.springwork.TrackCoach"> -->     
+    <!-- </bean> -->
+    <!-- <bean id= "myCoach" class = "com.jbc.springwork.BaseballCoach"> java should be taken out -->
+    <!-- Constructor Injection, myFortune is bean id on class that has constructor -->
+    <!-- </bean>    -->
+    
+    <!--  Defining Beans for MyCourseApp for springIOC package: Is Inversion of Control IOC -->
+   <bean id= "myCourse" class = "springIOC.TrackCourse">
+  		 <constructor-arg ref = "myCourseService"/>
+   </bean>
+   <!-- By Using this one Bean we can configure new classes into this bean, so finally our 'applicationcontext.xml' file is configurable. -->
+   <bean id= "myCourse1" class = "springIOC.JavaCourse">
+   		<constructor-arg ref = "myCourseService"/>
+   </bean>
+   <bean id= "myCourse2" class = "springIOC.SpringCourse">
+   </bean>
+   <!-- Below Beans or for Dependency Injection:Type Constructor Injections -->
+   <!-- 1:Define Dependencies -->
+   <!-- 2: Inject dependencies above: Constructor Injection -->
+   <bean id="myCourseService" class = "springIOC.HappyCourseService">
+   </bean>
+   
+   <!-- DI_Setter Injection: Injecting Setter method beans by creating a BeanID and Reference from existing Class -->
+   
+   <bean id="myOracleCourse" class = "springIOC.OracleCourse">
+   <!-- courseService will be the setter method name which Spring will call as 'setCourseService() by default when invoked with the Object or Bean Id given in Ref-->
+   		<property name="courseService" ref = "myCourseService"/>
+   </bean>
+
+   
+</beans> 

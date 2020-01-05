@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here..File is Loaded from the Starter files down-loaded -->
+    
+    <!--  Defining Beans for BeasnScopeDemo -->
+   <bean id= "myCourseService" class = "springIOC.HappyCourseService">
+   </bean>
+   <!-- Default Bean Scope is Singleton- Each time bean initialized only refers to one instance created on that bean(TrackCourse) -->
+   <bean id= "myCourse" class = "springIOC.TrackCourse" init-method="doStartMyCourse" destroy-method ="doDestroyMyCourse">
+   <!-- LifeCycle of Bean is between Init and Destroy methods : Means each time bean has to initialize with the External Function Call we specified here This function may contain the Business Logic. -->
+   		<constructor-arg ref = "myCourseService"/>
+   </bean>
+   
+</beans> 

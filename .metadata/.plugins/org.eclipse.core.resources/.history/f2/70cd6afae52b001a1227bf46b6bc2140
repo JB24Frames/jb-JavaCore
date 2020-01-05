@@ -1,0 +1,15 @@
+package springIOC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class RandomNumberApp {
+
+	public static void main(String[] args) {
+		
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Course theCourse = context.getBean("myCloudService", Course.class);
+
+	}
+
+}

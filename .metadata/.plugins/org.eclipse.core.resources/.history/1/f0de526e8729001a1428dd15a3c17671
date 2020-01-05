@@ -1,0 +1,16 @@
+package springIOC;
+
+public class JavaCourse implements Course {
+//	Accessing Course interface methods or fields through Implementing their respective Interfaces through @Override Annotation.
+	
+	@Override
+	public String getDailyCourse() {
+		return "Spend 4 hours on each Course work.";
+	}
+
+	@Override
+	public String getDailyService() {
+		return null;
+	}
+
+}

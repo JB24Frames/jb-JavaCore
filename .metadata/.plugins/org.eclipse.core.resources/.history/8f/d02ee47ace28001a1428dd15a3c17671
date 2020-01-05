@@ -1,0 +1,99 @@
+package strings;
+
+import java.util.*;
+
+
+public class HealthPartners {
+	public String solution(String S, String C) {
+        // write your code in Java SE 8
+ 
+        String company = C.toLowerCase();
+
+        Map<String, Employee> employeeMap = new LinkedHashMap<>();
+        String[] names = S.split("; ");
+
+        List<Employee> employees = new ArrayList<>();
+        Arrays.stream(names).forEach(name -> {
+            String[] array = name.split(" ");
+            String first = array[0].toLowerCase();
+            String last = getLastName(array);
+            String key = first + " " + last;
+
+            Employee employee = employeeMap.get(key);
+            if (employee == null) {
+                employee = new Employee(first, last);
+            } else {
+                employee.count += 1;
+            }
+            employees.add(new Employee(first, last, employee.count));
+            employeeMap.put(key, employee);
+        });
+
+        StringBuilder sb = new StringBuilder();
+
+        employees.forEach(emp -> {
+            String last = emp.last.replaceAll("-", "");
+            if (last.length() > 8) {
+                last = last.substring(0, 8);
+            }
+            sb.append(emp.first).append(".").append(last);
+            if (emp.count != 0) {
+                sb.append(emp.count + 1);
+            }
+            sb.append("@");
+            sb.append(company);
+            sb.append(".com");
+            sb.append("; ");
+        });
+        String result = sb.substring(0, sb.length() - 2);
+        return result;
+    }
+
+    private String getLastName(String[] array) {
+        if (array.length == 3) {
+            return array[2].toLowerCase();
+        } else {
+            return array[1].toLowerCase();
+        }
+    }
+}
+
+
+
+    class Employee {
+        String first, last;
+        int count;
+
+        public Employee(String first, String last) {
+            this.first = first;
+            this.last = last;
+        }
+
+        public Employee(String first, String last, int count) {
+            this.first = first;
+            this.last = last;
+            this.count = count;
+        }
+
+        @Override
+        public int hashCode() {
+            return first.hashCode() + last.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Employee other = (Employee) obj;
+            if (first == null) {
+                if (other.first != null)
+                    return false;
+            } else if (!first.equals(other.first))
+                return false;
+            if (last == null) {
+                if (other.last != null)
+                    return false;
+            } else if (!last.equals(other.last))
+                return false;
+            return true;
+        }
+    }
+}
